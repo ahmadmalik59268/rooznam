@@ -1,0 +1,6 @@
+{
+  "name": "Rooznam — Kids Wear",
+  "description": "Little Styles, Big Smiles. Eastern wear, western wear, branded suits and customized outfits for girls and boys across Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

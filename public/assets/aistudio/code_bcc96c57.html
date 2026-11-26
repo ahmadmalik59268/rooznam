@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rooznam - Little Styles, Big Smiles | Kids Wear</title>
+<!-- Tailwind CSS v3 CDN with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Custom Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rooznam: {
+              topbar: '#3c0764',
+              purple: '#55157e',
+              deepPurple: '#38035e',
+              darkPurple: '#2d024d',
+              pink: '#d91b7e',
+              lightPink: '#fdf2f8',
+              softBg: '#faf7fc',
+              borderLight: '#f1e6f5',
+              bannerBg: '#fbf5fd',
+              greenWA: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            serifLogo: ['Playfair Display', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts for Typography & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style data-purpose="base-styling">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #2b2b2b;
+      overflow-x: hidden;
+      background-color: #ffffff;
+    }
+    .brand-logo-font {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+  </style>
+<style data-purpose="custom-utilities">
+    /* Subtle image hover zoom */
+    .card-zoom-img {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .group:hover .card-zoom-img {
+      transform: scale(1.05);
+    }
+    /* Rounded arches for hero images */
+    .arch-shape-left {
+      border-radius: 120px 120px 30px 30px;
+    }
+    .arch-shape-right {
+      border-radius: 90px 90px 30px 30px;
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+<!-- BEGIN: AnnouncementBar -->
+<div class="bg-[#3c0764] text-white text-[11px] md:text-xs py-2 tracking-wider font-semibold text-center uppercase" data-purpose="top-announcement">
+    FREE DELIVERY ON ORDERS ABOVE RS. 3,000
+  </div>
+<!-- END: AnnouncementBar -->
+<!-- BEGIN: MainHeader -->
+<header class="bg-white border-b border-gray-100 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Left: Navigation Links -->
+<nav class="hidden md:flex items-center space-x-7 text-xs font-bold uppercase tracking-wider text-gray-800">
+<a class="hover:text-purple-700 transition" href="#">HOME</a>
+<div class="relative group cursor-pointer flex items-center gap-1 hover:text-purple-700 transition">
+<span>SHOP</span>
+<i class="fa-solid fa-chevron-down text-[9px] text-gray-500 group-hover:text-purple-700"></i>
+</div>
+<div class="relative group cursor-pointer flex items-center gap-1 hover:text-purple-700 transition">
+<span>GIRLS</span>
+<i class="fa-solid fa-chevron-down text-[9px] text-gray-500 group-hover:text-purple-700"></i>
+</div>
+<div class="relative group cursor-pointer flex items-center gap-1 hover:text-purple-700 transition">
+<span>BOYS</span>
+<i class="fa-solid fa-chevron-down text-[9px] text-gray-500 group-hover:text-purple-700"></i>
+</div>
+</nav>
+<!-- Center: Brand Logo -->
+<div class="flex flex-col items-center select-none cursor-pointer">
+<div class="relative flex items-center justify-center">
+<!-- Butterfly Icon -->
+<div class="absolute -top-3 text-pink-500">
+<svg class="w-6 h-6 fill-current text-pink-500" viewbox="0 0 24 24">
+<path d="M12 4.5C11.3 2.5 9 1 7 1C4 1 2 3.5 2 6.5C2 10.5 6 13 12 17C18 13 22 10.5 22 6.5C22 3.5 20 1 17 1C15 1 12.7 2.5 12 4.5Z" opacity="0.3"></path>
+<path d="M12 9C10.5 7.5 8 6 6 6C3.5 6 2 8 2 10.5C2 14.5 7 17.5 12 21C17 17.5 22 14.5 22 10.5C22 8 20.5 6 18 6C16 6 13.5 7.5 12 9Z"></path>
+</svg>
+</div>
+<!-- Logo Typography -->
+<span class="text-3xl md:text-4xl brand-logo-font font-bold text-[#4a126d] tracking-wide mt-2">
+            Rooznam
+          </span>
+</div>
+</div>
+<!-- Right: Action Icons (Search, User, Cart) -->
+<div class="flex items-center space-x-5 text-gray-700">
+<button aria-label="Account" class="hover:text-purple-700 transition" type="button">
+<i class="fa-regular fa-user text-lg"></i>
+</button>
+<button aria-label="Search" class="hover:text-purple-700 transition" type="button">
+<i class="fa-solid fa-magnifying-glass text-lg"></i>
+</button>
+<!-- Shopping Cart with Amount Badge -->
+<a class="flex items-center space-x-1.5 text-xs font-semibold text-gray-800 hover:text-purple-700 transition" href="#">
+<span>Rs 0</span>
+<div class="relative">
+<i class="fa-solid fa-bag-shopping text-xl text-gray-700"></i>
+<span class="absolute -top-1 -right-2 bg-purple-900 text-white rounded-full text-[10px] w-4 h-4 flex items-center justify-center font-bold">0</span>
+</div>
+</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main>
+<!-- BEGIN: HeroSection -->
+<section class="bg-gradient-to-r from-[#fbf5fd] via-[#f7eefc] to-[#f4e8fa] pt-12 pb-16 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Hero Text Content -->
+<div class="lg:col-span-6 space-y-6">
+<!-- Pill Category Kicker -->
+<span class="inline-block text-[11px] font-extrabold uppercase tracking-widest text-[#d91b7e] font-sans">
+              NEW COLLECTION • KIDSWEAR
+            </span>
+<!-- Main Hero Heading -->
+<h1 class="text-5xl sm:text-6xl font-black text-[#38035e] tracking-tight leading-[1.08]">
+              Little Styles,<br/>
+<span class="text-[#d91b7e]">Big Smiles.</span>
+</h1>
+<p class="text-sm sm:text-base text-gray-600 max-w-lg leading-relaxed">
+              Eastern wear, western wear, branded suits and customized outfits for girls and boys. Soft fabrics, happy colours and doorstep delivery all over Pakistan.
+            </p>
+<!-- Call-to-Action Buttons -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="px-7 py-3 rounded-full bg-[#520d75] hover:bg-[#40085d] text-white text-xs sm:text-sm font-bold tracking-wide shadow-md transition transform hover:-translate-y-0.5" href="#">
+                Shop new arrivals
+              </a>
+<a class="px-6 py-3 rounded-full border border-[#520d75] text-[#520d75] hover:bg-[#520d75] hover:text-white text-xs sm:text-sm font-bold tracking-wide transition transform hover:-translate-y-0.5" href="https://wa.me/923299267363" target="_blank">
+                Order on WhatsApp
+              </a>
+</div>
+<!-- Trust Pills -->
+<div class="flex flex-wrap items-center gap-2 pt-3 text-[11px] font-medium text-gray-600">
+<span class="px-3.5 py-1.5 rounded-full bg-white/80 border border-purple-100 shadow-sm">
+                Cash on Delivery
+              </span>
+<span class="px-3.5 py-1.5 rounded-full bg-white/80 border border-purple-100 shadow-sm">
+                Free delivery above Rs. 3,000
+              </span>
+<span class="px-3.5 py-1.5 rounded-full bg-white/80 border border-purple-100 shadow-sm">
+                7-day exchange
+              </span>
+</div>
+</div>
+<!-- Hero Editorial Collage Images -->
+<div class="lg:col-span-6 relative flex justify-center lg:justify-end items-center gap-4 sm:gap-6 mt-8 lg:mt-0">
+<!-- Left Portrait Arch Frame -->
+<div class="relative w-44 sm:w-56 h-[340px] sm:h-[420px] arch-shape-left overflow-hidden shadow-2xl border-4 border-white bg-pink-100">
+<img alt="Girls Eastern Festive Outfit" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVbH56YQgGwp0YZ52zYRs7OERWcDZ0VYBg-0Jz1tbvGgPzaHQFwKnui_QMCj5HhHoggYUNPGMDneHEaehrtilfQZqy8UfcslbQ2-hgTpNhTFAGOV-WoTEDUenF4pAHTRSduKL90A4u7vmuQoWFDQTFReBvKkgqhPfZ9yamY7QEP6jR-CHIHMWKZZ_or0o2TZnJ-r_tOXO_JT1CHhfSv_dJmYdkCMo5R-hO6FbLJwex"/>
+</div>
+<!-- Right Portrait Arch Frame (Staggered) -->
+<div class="relative w-40 sm:w-52 h-[300px] sm:h-[380px] arch-shape-right overflow-hidden shadow-xl border-4 border-white bg-purple-100 mt-10">
+<img alt="Boys Traditional and Western Wear" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL1YSJ9LLSBMxEkA2kPqi_dKd_kQu3PXfIkOss50Ye5NFuABNuWqz-fQ3Msteful-ZnOuO1VIA-HBdZNeQN5-KhEZ4Vx-DTdGEd6IlMsJS_13OTGw3TnYQKueIKJ2Zur5zkJWyZ0R-Yd0d1yYSqfLfQ-BJuqIL36GicqPMaYwAreDWNOBlO8g4vV5jPaQEpCYlpiZ6wni9zjcWfbHogR6vPx2JDhVgnZE6pJULItjU"/>
+</div>
+<!-- Overlapping Pink Circular Badge: Ages 2 to 8 -->
+<div class="absolute top-1/2 left-1/2 -translate-x-12 -translate-y-8 z-20 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#d91b7e] text-white flex flex-col items-center justify-center font-bold shadow-lg border-2 border-white text-center leading-tight">
+<span class="text-[10px] uppercase font-semibold">Ages</span>
+<span class="text-sm sm:text-base font-black">2 to 8</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: TrustStripRibbon -->
+<section class="bg-[#38035e] text-white py-4 border-y border-[#4a087a]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<!-- Benefit 1 -->
+<div class="flex items-center space-x-3">
+<div class="text-purple-300 text-xl"><i class="fa-solid fa-truck-fast"></i></div>
+<div>
+<p class="text-xs sm:text-sm font-bold leading-tight">Free delivery</p>
+<p class="text-[11px] text-purple-200">On orders above Rs. 3,000</p>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="flex items-center space-x-3">
+<div class="text-purple-300 text-xl"><i class="fa-solid fa-wallet"></i></div>
+<div>
+<p class="text-xs sm:text-sm font-bold leading-tight">Cash on Delivery</p>
+<p class="text-[11px] text-purple-200">Pay when your order arrives</p>
+</div>
+</div>
+<!-- Benefit 3 -->
+<div class="flex items-center space-x-3">
+<div class="text-purple-300 text-xl"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+<div>
+<p class="text-xs sm:text-sm font-bold leading-tight">7-day exchange</p>
+<p class="text-[11px] text-purple-200">For eligible items</p>
+</div>
+</div>
+<!-- Benefit 4 -->
+<div class="flex items-center space-x-3">
+<div class="text-purple-300 text-xl"><i class="fa-brands fa-whatsapp"></i></div>
+<div>
+<p class="text-xs sm:text-sm font-bold leading-tight">WhatsApp support</p>
+<p class="text-[11px] text-purple-200">+92 329 9267363</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TrustStripRibbon -->
+<!-- BEGIN: ShopByCategory -->
+<section class="py-16 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<!-- Section Kicker -->
+<span class="text-[11px] font-extrabold uppercase tracking-widest text-[#d91b7e]">
+          SHOP BY CATEGORY
+        </span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-[#38035e] mt-2 mb-3">
+          Find the perfect outfit
+        </h2>
+<p class="text-xs sm:text-sm text-gray-500 max-w-xl mx-auto mb-12">
+          From everyday eastern wear to festive branded suits, everything is picked for comfort and for little smiles.
+        </p>
+<!-- Category Grid: Row 1 (4 items) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-6">
+<!-- Category 1: Girls Eastern Wear -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-[4/5] bg-gray-100 cursor-pointer">
+<img alt="Girls Eastern Wear" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_uMxpF4ErpTsjMSFvGzN8e680PjBrWjOdaBn6TybXC0AlWpVnLdlsqp0m_dLkLhGHq1jjbfC12mYpDjlpMw6P6QFvpdyePK3hqNoZJmqBEaSF1qBMiZEIxTp1SvjIvkfp3pVt3bO8AbmGCRmo_xlREhFTzgtCt5MuegLXMCkqGS5xmi_RyCOagDGoAqk9U4rp6QCDz1qDZJntg9HkPFVkmntvoHETDI2Zf61sVUIw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#38035e]/90 via-[#38035e]/30 to-transparent flex flex-col justify-end p-4 text-left">
+<h3 class="text-white font-bold text-sm sm:text-base leading-snug">Girls Eastern Wear</h3>
+<p class="text-[11px] text-purple-200 font-medium">6 styles</p>
+</div>
+</div>
+<!-- Category 2: Girls Western Wear -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-[4/5] bg-gray-100 cursor-pointer">
+<img alt="Girls Western Wear" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo6uTB-4r6MLvshASRNcBn7BMdwyLTCwKfLvHoxte8hz_2FuNc-6_aPHuBwKrQR3dxQYmaq7XpPUO3cuLscD34uR9WHYN7FdFp4c9TlGppNTkOHhmIdPsjOkYiyUiMduBTpel54e1pdTO2z2Gg6JwgWhJMqaffC0o1RApkClntXW0H7ZixUGO-QruWKIAbSnovOl-Dnk8hLmU2mhSrinjPZgxOQ4bESX9fqsCtBTn7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#38035e]/90 via-[#38035e]/30 to-transparent flex flex-col justify-end p-4 text-left">
+<h3 class="text-white font-bold text-sm sm:text-base leading-snug">Girls Western Wear</h3>
+<p class="text-[11px] text-purple-200 font-medium">12 styles</p>
+</div>
+</div>
+<!-- Category 3: Boys Eastern Wear -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-[4/5] bg-gray-100 cursor-pointer">
+<img alt="Boys Eastern Wear" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSqIFWrKSwDsY5g61BIHd-93FVj8C2Os4TAjlkI1xOSz75dTJ3gP1aZMLFwhXwllcLqkfjopvpgZsb82aL4P7CfZn8ixbg0hTlnN8Hqatno8MLhQYetsufiqGQnQRgJ4I09xO8_I76OQy_3P8_6Tvkal4u60d5yv4UlXVm45Hf_n64dJYGycDSmH9pNEvWCcNT5itgxDLeWdelG75KfongWLaQqWhbQZoMlqntFMzN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#38035e]/90 via-[#38035e]/30 to-transparent flex flex-col justify-end p-4 text-left">
+<h3 class="text-white font-bold text-sm sm:text-base leading-snug">Boys Eastern Wear</h3>
+<p class="text-[11px] text-purple-200 font-medium">2 styles</p>
+</div>
+</div>
+<!-- Category 4: Boys Western Wear -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-[4/5] bg-gray-100 cursor-pointer">
+<img alt="Boys Western Wear" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP7llJJhWkpFHPv6-1Cj8v-uB3iNsjnt_WEvGgzuPo6wgzEtV3v__IUDAwGSPEPW8XvdnYVBECm-GWcm8ZYsOWgAKGJcqd0ie2VBq9qZf0--6Sr039_yC1Fe1AtJIqvUb-STgIizEIXE1uJ4DquWTpzI0Xmua9VPjd1otDAqpF36HkhQTLLAusf4QzY4kDDp6T2c3e1qextkySqC9FU71TXu8buU5Ht-vp0avew4yk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#38035e]/90 via-[#38035e]/30 to-transparent flex flex-col justify-end p-4 text-left">
+<h3 class="text-white font-bold text-sm sm:text-base leading-snug">Boys Western Wear</h3>
+<p class="text-[11px] text-purple-200 font-medium">5 styles</p>
+</div>
+</div>
+</div>
+<!-- Category Grid: Row 2 (3 wider cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+<!-- Category 5: Branded Ready To Wear -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-[4/5] bg-gray-100 cursor-pointer">
+<img alt="Branded Ready To Wear" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSjWQR21APF4BEmdjWAZEeKakfkjRb4oXmoBIJoWZCLlcvSS7HLAvZHaYzQGyU_mmtlU-R1uGEIuHzD_VpHkfJ7Em8jN_OjEikxkdE6xmZ8okuopiHjk-OEyim5YN7oM7oiP23fDcphK4FUbfUHPvuyPUi6y79gkrZD14DeE7F6df2ux8oWNi_AigGkNCPYFngvdCgzuCt7zC8d8zCJe-5vL6M57aUKq-SUTSjZlkz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#38035e]/90 via-[#38035e]/30 to-transparent flex flex-col justify-end p-5 text-left">
+<h3 class="text-white font-bold text-base sm:text-lg leading-snug">Branded Ready To Wear</h3>
+<p class="text-xs text-purple-200 font-medium">7 styles</p>
+</div>
+</div>
+<!-- Category 6: Branded Ready To Stitch -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-[4/5] bg-gray-100 cursor-pointer">
+<img alt="Branded Ready To Stitch" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMcjbfsMfPFP3SQyhyR4UmZf_0sQyJjBlY9Kr4w6Ui2MKOZv8M_Ltf3qcq3eV-_NZdO47WFS0_V1tjlkZMKLujsy1Pxz86ynbW18caBo3NNCwRpWa8dSLiZ8TrP-YV1POlIpsPx7w3Lx1ZdFUbpYWsG66pMwu0AHa2eRLSw9kqltjnnwJ7wo6q3dtXTk_sJpi0mdwRu1pvvIfCvsJ4v4VElwT80D7GBvCgLzwBInD4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#38035e]/90 via-[#38035e]/30 to-transparent flex flex-col justify-end p-5 text-left">
+<h3 class="text-white font-bold text-base sm:text-lg leading-snug">Branded Ready To Stitch</h3>
+<p class="text-xs text-purple-200 font-medium">5 styles</p>
+</div>
+</div>
+<!-- Category 7: Customized Suits -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-[4/5] bg-gray-100 cursor-pointer">
+<img alt="Customized Suits" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNZkkrZzY8TH-6YJWBakGV25GdISnnsPpgR0UcG6iGp0bjjwIO27mF0-a35vTmpkLrevtlipY4lKI9eCVpsHX5sWJpOXkrpouPJxRG0w34KEo8fsopx61pgHaQvjAfkoaYj6IpgKHLqK9lQxCrKsi3muxMWkddfinTTz2vCDWxE-9idKzQ3cZFsN_fATMFn5ysmsThIOIpCGopb2u2aoabo0-5iO4dwXj5Am5WyseT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#38035e]/90 via-[#38035e]/30 to-transparent flex flex-col justify-end p-5 text-left">
+<h3 class="text-white font-bold text-base sm:text-lg leading-snug">Customized Suits</h3>
+<p class="text-xs text-purple-200 font-medium">3 styles</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ShopByCategory -->
+<!-- BEGIN: NewArrivalsSection -->
+<section class="py-14 bg-[#faf8fc] border-t border-purple-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Header row -->
+<div class="flex items-end justify-between mb-8">
+<div>
+<span class="text-[11px] font-extrabold uppercase tracking-widest text-[#d91b7e]">
+              JUST LANDED
+            </span>
+<h2 class="text-3xl font-extrabold text-[#38035e] mt-1">
+              New arrivals
+            </h2>
+</div>
+<a class="text-xs sm:text-sm font-bold text-[#55157e] hover:text-[#d91b7e] transition underline underline-offset-4" href="#">
+            View all products
+          </a>
+</div>
+<!-- Product Grid: 8 Products (2 rows of 4) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+<!-- Product 1 -->
+<div class="group flex flex-col text-left">
+<div class="relative bg-white rounded-2xl overflow-hidden shadow-sm aspect-[3/4] mb-3">
+<img alt="Outfitters Boys Textured Shirt" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA03_xtnrTRVqM6Pth6vlof46yFTfDIqnHMPiG9BOveUydDZIlUkqRI1451gWi20XE7Y2SUDBvKMMxZ3M3R35mBu5NErrerpH1EelDn6fPlt5Rfa8dAQXzjPjL5kdbteSrUJy892lX7MPatVLx1f97kEU13JLAEymNewfhONw0wXSwPa37oWlUc6XRrPYNcyOsEdIGOLOYYxnYm3M6gfvxq3xavjXsgjBaI0lz2uwNV"/>
+<button aria-label="Add to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+</div>
+<h3 class="text-xs sm:text-sm font-medium text-gray-800 line-clamp-2 hover:text-[#55157e] cursor-pointer">
+              Outfitters Boys Textured Shirt | Caramel Brown Regular Fit
+            </h3>
+<p class="text-xs sm:text-sm font-bold text-[#55157e] mt-1">Rs 2,890</p>
+</div>
+<!-- Product 2 -->
+<div class="group flex flex-col text-left">
+<div class="relative bg-white rounded-2xl overflow-hidden shadow-sm aspect-[3/4] mb-3">
+<img alt="Edenrobe Boys Cotton Pants" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5RQsfC5ks8OYeQToFA-k8WIqlZUz3MisAvj284DXF6_Jz6oASM-gZLqEaEGp5LZnPoLmPU8eVTqYzUCZfHk99R1n3wpgA9-dKQizSZ3Zx5-88aDIpSCRDntuE90qLv4doZYClAVkaQ_5evT3r81SRGY17GBBNiawToXQaqjVDXb8tuthJOV7ZhtnIJWilollvu--a-Zf25dZP6mfgm-PHyBwYwVehKX93AoljRqY5"/>
+<button aria-label="Add to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+</div>
+<h3 class="text-xs sm:text-sm font-medium text-gray-800 line-clamp-2 hover:text-[#55157e] cursor-pointer">
+              Edenrobe Boys Cotton Pants | Navy Blue Chinos Regular Fit
+            </h3>
+<p class="text-xs sm:text-sm font-bold text-[#55157e] mt-1">Rs 2,190</p>
+</div>
+<!-- Product 3 -->
+<div class="group flex flex-col text-left">
+<div class="relative bg-white rounded-2xl overflow-hidden shadow-sm aspect-[3/4] mb-3">
+<img alt="Edenrobe Boys Chinos Pant" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk5g_TGVGKiGZWvq8FoCJzFfoJtYlhQs_tLeC3WAa5bgY3fcF_iZvLaqbYYRU96h2UUprYZ-MAkLWcffhe4GRRjAUTGYyiSMBjyWKHxtQWtM9mLzSxaJcvU-C8RM4fPrVPnz3rTc41LW-cRPKSHHdA9e7xOCfJ4GBIJYERGocjQKwLqxSlxVrqlLE_ukmyikli4gsKQvNLeysEACMauM01B-a_eWJ4woPq8y8N82VB"/>
+<button aria-label="Add to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+</div>
+<h3 class="text-xs sm:text-sm font-medium text-gray-800 line-clamp-2 hover:text-[#55157e] cursor-pointer">
+              Edenrobe Boys Chinos Pant | Navy Blue Regular Fit
+            </h3>
+<p class="text-xs sm:text-sm font-bold text-[#55157e] mt-1">Rs 2,190</p>
+</div>
+<!-- Product 4 -->
+<div class="group flex flex-col text-left">
+<div class="relative bg-white rounded-2xl overflow-hidden shadow-sm aspect-[3/4] mb-3">
+<img alt="Edenrobe Boys Ripped Jeans" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCObPN3OfuDgXnQwgPVi-NKXXC58Q0pzm6_JAMU0PgGpVjZC1ssRcWWMDsK5amE-lN9iT5pn32DA5hCAvFeYABqs5cCBUTz8egVDxCKX7sJwQJv9quP3yx59JBsaBHVTSyquGPMucZ_pH3I4XbRoUT5BoT2OhM03_Zcv0LaFyq9gOojT6xmSOjvXa2AXTAa0Kyew29Cr7JANja8PrTHkLysTnzZWWom7PTJSeetEP7U"/>
+<button aria-label="Add to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+</div>
+<h3 class="text-xs sm:text-sm font-medium text-gray-800 line-clamp-2 hover:text-[#55157e] cursor-pointer">
+              Edenrobe Boys Ripped Jeans | Denim Light Blue Regular Fit
+            </h3>
+<p class="text-xs sm:text-sm font-bold text-[#55157e] mt-1">Rs 2,190</p>
+</div>
+<!-- Product 5 -->
+<div class="group flex flex-col text-left">
+<div class="relative bg-white rounded-2xl overflow-hidden shadow-sm aspect-[3/4] mb-3">
+<img alt="Edenrobe Boys Jeans" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwuYgPdivIEW1dkPACGPiIx1CNeCaDC5xnjElzwS3cpLqxQzyuwjLFBEP_mt8HdlJh0eK2R3zpjQD1h4JZxEHIq6le8lVd6ZHNOBFipsUFQE3NggC0YZ19btR3vMIOmir76mh1bawU3uEjSlYnV7aoI1M36574VjsINygib6YOkHH2feuVCYmjGSLAmBlpr4drDrBsxRFimmdG573Cjsizh1-3WiqntcqynZCqMCO3"/>
+<button aria-label="Add to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+</div>
+<h3 class="text-xs sm:text-sm font-medium text-gray-800 line-clamp-2 hover:text-[#55157e] cursor-pointer">
+              Edenrobe Boys Jeans | Denim Blue Stretchable
+            </h3>
+<p class="text-xs sm:text-sm font-bold text-[#55157e] mt-1">Rs 2,290</p>
+</div>
+<!-- Product 6 -->
+<div class="group flex flex-col text-left">
+<div class="relative bg-white rounded-2xl overflow-hidden shadow-sm aspect-[3/4] mb-3">
+<img alt="ETHNIC Girls Embellished Jeans" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwcId4bcihLCRfDY_rZWMy4lOHkO6_zuF5owRmbXgh2Nw9LvjhpvoZ5ri_EKqTQJy3UgtQ-ORjfpfd0GlybLsRa0n2v7ui5we3Fg_0n8I1gfJzW3iElGgCw1Ek3tj47OryYTNmtzyMIx8z3qWqXGvXlQVjvRdb4wvQfGj7S18v-9KNaQ39MSDRnWwELAEucyGKSKXYQk2FRt0eBfNr2PVUbddyclDzOaI8YUIftPZt"/>
+<button aria-label="Add to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+</div>
+<h3 class="text-xs sm:text-sm font-medium text-gray-800 line-clamp-2 hover:text-[#55157e] cursor-pointer">
+              ETHNIC Girls Embellished Jeans | Denim Blue Slouchy Fit
+            </h3>
+<p class="text-xs sm:text-sm font-bold text-[#55157e] mt-1">Rs 2,360</p>
+</div>
+<!-- Product 7 -->
+<div class="group flex flex-col text-left">
+<div class="relative bg-white rounded-2xl overflow-hidden shadow-sm aspect-[3/4] mb-3">
+<img alt="Girls Floral Set" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-YiGZVnNZWB9UVQM5Lo1bTfwdJ7-Qcorv2V2erzOYOs3hvP69YdDdEwkgfpl3J0V9ENr7MovDlMcTnTFV2VfH1AXdiEwrDCSULcqRjl3qtLfXEzbwte43HZerbl6ijOPhBv793rUZvdDgqxzDOCGnJ0oG5QibV6ubn0SHrhy7Bn0AsB5sBOsAgD1-Dgk9B2rWq_B82Dm5GGt-ZNZ7WCc8l3JKWDl1mg7XBnzsxeMA"/>
+<button aria-label="Add to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+</div>
+<h3 class="text-xs sm:text-sm font-medium text-gray-800 line-clamp-2 hover:text-[#55157e] cursor-pointer">
+              Girls Floral Set | Pastel Pink Co-Ord
+            </h3>
+<p class="text-xs sm:text-sm font-bold text-[#55157e] mt-1">Rs 750</p>
+</div>
+<!-- Product 8 -->
+<div class="group flex flex-col text-left">
+<div class="relative bg-white rounded-2xl overflow-hidden shadow-sm aspect-[3/4] mb-3">
+<img alt="Girls Graphic Co-Ord Set" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH9g2I4TulIJdFfvWj63NFg7dQU6WwCE1HKeSYowzygn8aTwacQGBbKlmKVARP46xjrMscg4VOxzGVVXoNu9zjGSgTWsqNd8hQZbYXqhXe2epONbxrTHB4ieAQgIfoqu2-EnkY95vZoRdmu4djytdGXz337p-ExVeZby5M0p4ZA9Xo7NZz05PA8kKjocTVd4nFmi1dlVgpLjIGk7FEh79F-RgYm0FiKShz6ylMol2U"/>
+<button aria-label="Add to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+</div>
+<h3 class="text-xs sm:text-sm font-medium text-gray-800 line-clamp-2 hover:text-[#55157e] cursor-pointer">
+              Girls Graphic Co-Ord Set | Pastel Yellow Floral
+            </h3>
+<p class="text-xs sm:text-sm font-bold text-[#55157e] mt-1">Rs 750</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: NewArrivalsSection -->
+<!-- BEGIN: CustomizedSuitsBanner -->
+<section class="py-12 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="rounded-3xl overflow-hidden shadow-lg grid grid-cols-1 lg:grid-cols-12">
+<!-- Banner Left: Deep Purple Content Box -->
+<div class="lg:col-span-7 bg-[#490c6d] p-8 sm:p-14 flex flex-col justify-center text-left text-white">
+<span class="text-[11px] font-extrabold uppercase tracking-widest text-pink-300 mb-3">
+              MADE FOR CELEBRATIONS
+            </span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight mb-4">
+              Customized suits, stitched in your child's size
+            </h2>
+<p class="text-xs sm:text-sm text-purple-100 max-w-lg leading-relaxed mb-8">
+              Pick a design with cutwork or Sindhi embroidery, choose the age size and we will stitch it for you. Message us on WhatsApp for custom colours or measurements.
+            </p>
+<div>
+<a class="inline-block px-7 py-3 rounded-full bg-white text-[#490c6d] hover:bg-purple-50 text-xs sm:text-sm font-bold tracking-wide transition shadow-md" href="https://wa.me/923299267363" target="_blank">
+                Explore customized suits
+              </a>
+</div>
+</div>
+<!-- Banner Right: Editorial Girl Photo -->
+<div class="lg:col-span-5 relative min-h-[300px] lg:min-h-[440px] bg-purple-900">
+<img alt="Child in embroidered festive suit" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1DH17-MB1qwT4unw_Y06o4u_6sZKI-_Ae1w61XnE8P1vmKUVRrtO0wYEAj7lIwlTm7_1_HKvErjo7TRyUdDCTlTFrw68Ab0GX48dRuoNbmuVMBrU4I1Rvd66yNxWEeuEMICsHbP_G_wZQXV-VhndfLUD7JZhSM0lo36VQUARijWkPhv8sXeJlmgeNuiS3fUw8ruRCHGN3rf-dTnjBT0q9OkHUtE3Y0tDGglUTi6GZ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CustomizedSuitsBanner -->
+<!-- BEGIN: BrandedReadyToWear -->
+<section class="py-14 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Header row -->
+<div class="flex items-end justify-between mb-8">
+<div>
+<span class="text-[11px] font-extrabold uppercase tracking-widest text-[#d91b7e]">
+              FESTIVE FAVOURITES
+            </span>
+<h2 class="text-3xl font-extrabold text-[#38035e] mt-1">
+              Branded ready to wear
+            </h2>
+</div>
+<a class="text-xs sm:text-sm font-bold text-[#55157e] hover:text-[#d91b7e] transition underline underline-offset-4" href="#">
+            See the collection
+          </a>
+</div>
+<!-- 4-column Product Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+<!-- Product Item 1 -->
+<div class="group flex flex-col text-left">
+<div class="relative bg-gray-50 rounded-2xl overflow-hidden shadow-sm aspect-[3/4] mb-3">
+<img alt="Outfitters Boys Textured Shirt" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjFQV4qSMRccfY66wgXmAeEffRB6XFUSw91gb2r7e0rHTEawv9tyduLnIrMsm6ha32XDEW925wBa40uLYuVHeLLZ6MFVOYPrmmxsL4WFf-qjCnZMOdul4RtdiQwjsQjXphbuZyDsZIR9TpjMXJ3jarT6wWup2HD49OT0zeHSBDG2m0A6VC1puo-wAC98wcYe0xL2aQGt_kFNgW9ITvmKZKxapX_lIiqYP8Te5tikFN"/>
+<button aria-label="Add to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+</div>
+<h3 class="text-xs sm:text-sm font-medium text-gray-800 line-clamp-2 hover:text-[#55157e] cursor-pointer">
+              Outfitters Boys Textured Shirt | Caramel Brown Regular Fit
+            </h3>
+<p class="text-xs sm:text-sm font-bold text-[#55157e] mt-1">Rs 2,890</p>
+</div>
+<!-- Product Item 2 -->
+<div class="group flex flex-col text-left">
+<div class="relative bg-gray-50 rounded-2xl overflow-hidden shadow-sm aspect-[3/4] mb-3">
+<img alt="Edenrobe Boys Cotton Pants" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0ZphoA39Vz6QYHbNe0TA0TwV1tQLPgytJivTW6Fe35Z6jwHEUkq3-p35pdNro2Y03QI3cp2gNUi7GF7z9f1mBBMuQZujM7vizP0wCNFyHlgWBebyYTQs0KJ0DN5sd77bADomyjTiH_JH8J5sFDLeSC7WXKA2ouqiF0btIKS-vF_kpSGGW-Hgwto313zcKkB-LivAOUhW05vhGGUrM2O-eUsS7oUJB1soQ7t8qsFCo"/>
+<button aria-label="Add to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+</div>
+<h3 class="text-xs sm:text-sm font-medium text-gray-800 line-clamp-2 hover:text-[#55157e] cursor-pointer">
+              Edenrobe Boys Cotton Pants | Navy Blue Chinos Regular Fit
+            </h3>
+<p class="text-xs sm:text-sm font-bold text-[#55157e] mt-1">Rs 2,190</p>
+</div>
+<!-- Product Item 3 -->
+<div class="group flex flex-col text-left">
+<div class="relative bg-gray-50 rounded-2xl overflow-hidden shadow-sm aspect-[3/4] mb-3">
+<img alt="Edenrobe Boys Chinos Pant" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADska7NMHdtTQ90ScV2qDDEEaJEwFbJRJy7cCI2wkqMft5-K9UzCyq84FR8SYdbLnMH0QVrqMagUK4roNQwchkg95laoLlgek2ZhW_ixmmX6Rt0l8h0upByq5gMokRmGT3SvAT4Mj3AmJZcqY-AoYWg75cQ06IBSS0wD00rqEo57o9pxr6emXV4a241-YLJ0p6ChGq4eiFzjHNSrYbeFdvq4G2PNok68C-fM_C6kDn"/>
+<button aria-label="Add to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+</div>
+<h3 class="text-xs sm:text-sm font-medium text-gray-800 line-clamp-2 hover:text-[#55157e] cursor-pointer">
+              Edenrobe Boys Chinos Pant | Navy Blue Regular Fit
+            </h3>
+<p class="text-xs sm:text-sm font-bold text-[#55157e] mt-1">Rs 2,190</p>
+</div>
+<!-- Product Item 4 -->
+<div class="group flex flex-col text-left">
+<div class="relative bg-gray-50 rounded-2xl overflow-hidden shadow-sm aspect-[3/4] mb-3">
+<img alt="Edenrobe Boys Ripped Jeans" class="w-full h-full object-cover card-zoom-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAiBH_8pdevpjYOMu7l3yf8fABcU1dKw6z0j-XdjqXRSIzw2_6tMWgty0fHROyEkIpiMOdnGJCg596ERx4GFmkwneYVM5_kTUPt6i3-0l3b8purbL-JzYEsdFhoqO9sf7vVPurtju1ts7UzfGVDgKUUCebcjRjTanu-VXD6SaLa7X1HI4gCiIIJmI7Ag5oQheBHRvJ-l5hnvHhpJUPch9m5A9dXeGwjuSwfMgyZKdx"/>
+<button aria-label="Add to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-red-500 flex items-center justify-center shadow-sm transition">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+</div>
+<h3 class="text-xs sm:text-sm font-medium text-gray-800 line-clamp-2 hover:text-[#55157e] cursor-pointer">
+              Edenrobe Boys Ripped Jeans | Denim Light Blue Regular Fit
+            </h3>
+<p class="text-xs sm:text-sm font-bold text-[#55157e] mt-1">Rs 2,190</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: BrandedReadyToWear -->
+<!-- BEGIN: WhyRooznam -->
+<section class="py-16 bg-[#faf5fd]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<!-- Section Kicker -->
+<span class="text-[11px] font-extrabold uppercase tracking-widest text-[#d91b7e]">
+          WHY ROOZNAM
+        </span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-[#38035e] mt-2 mb-12">
+          Shopping that is easy for parents
+        </h2>
+<!-- 4 Clean White Feature Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+<!-- Card 1 -->
+<div class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-pink-500 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center text-lg mb-4">
+<i class="fa-solid fa-shirt"></i>
+</div>
+<h3 class="text-sm font-bold text-gray-900 mb-2">Soft, child-friendly fabrics</h3>
+<p class="text-xs text-gray-500 leading-relaxed">
+                Lawn, cotton, khaddar and wash-and-wear picked for comfort through the day.
+              </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-purple-600 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-lg mb-4">
+<i class="fa-solid fa-palette"></i>
+</div>
+<h3 class="text-sm font-bold text-gray-900 mb-2">Eastern, western and branded</h3>
+<p class="text-xs text-gray-500 leading-relaxed">
+                Everyday kurtas, co-ord sets, party wear and branded suits in one place.
+              </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-blue-600 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg mb-4">
+<i class="fa-solid fa-ruler-combined"></i>
+</div>
+<h3 class="text-sm font-bold text-gray-900 mb-2">Sizes by age</h3>
+<p class="text-xs text-gray-500 leading-relaxed">
+                Choose the age on every product page. Ready-to-stitch and customized suits are made in your size.
+              </p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-emerald-500 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg mb-4">
+<i class="fa-solid fa-box-open"></i>
+</div>
+<h3 class="text-sm font-bold text-gray-900 mb-2">Easy delivery and exchange</h3>
+<p class="text-xs text-gray-500 leading-relaxed">
+                Cash on Delivery across Pakistan and a 7-day exchange for eligible items.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: WhyRooznam -->
+<!-- BEGIN: WhatsAppHelpBanner -->
+<section class="py-12 bg-white">
+<div class="max-w-5xl mx-auto px-4 sm:px-6">
+<div class="bg-[#fff9eb] border border-amber-200/70 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+<div class="text-center sm:text-left">
+<h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-1">
+              Need help choosing a size or design?
+            </h3>
+<p class="text-xs sm:text-sm text-gray-600">
+              Send us a message on WhatsApp and we will help you pick the right outfit.
+            </p>
+</div>
+<a class="px-6 py-3 rounded-full bg-[#1faf59] hover:bg-[#19994c] text-white text-xs sm:text-sm font-bold flex items-center gap-2 whitespace-nowrap shadow-md transition" href="https://wa.me/923299267363" target="_blank">
+<i class="fa-brands fa-whatsapp text-lg"></i>
+            Chat on WhatsApp
+          </a>
+</div>
+</div>
+</section>
+<!-- END: WhatsAppHelpBanner -->
+<!-- BEGIN: NewsletterSection -->
+<section class="bg-[#38035e] text-white py-14">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Newsletter Subscription Left -->
+<div class="lg:col-span-7">
+<h3 class="text-2xl sm:text-3xl font-bold mb-2">Join the Rooznam family</h3>
+<p class="text-xs sm:text-sm text-purple-200 mb-5">
+              Be the first to hear about new arrivals, festive collections and special offers.
+            </p>
+<form class="flex max-w-md" onsubmit="event.preventDefault()">
+<input class="w-full px-4 py-2.5 rounded-l-md bg-white text-gray-800 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-purple-400 border-0 placeholder-gray-400" placeholder="Enter your email address" type="email"/>
+<button class="bg-black hover:bg-gray-900 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-r-md transition whitespace-nowrap" type="submit">
+                Subscribe
+              </button>
+</form>
+<p class="text-[10px] text-purple-300 mt-2">
+              By subscribing you agree to our <a class="underline hover:text-white" href="#">Terms &amp; Conditions</a> and <a class="underline hover:text-white" href="#">Privacy Policy</a>.
+            </p>
+</div>
+<!-- Help Info Right -->
+<div class="lg:col-span-5 text-left lg:text-right border-t lg:border-t-0 border-purple-800 pt-6 lg:pt-0">
+<p class="text-base sm:text-lg font-bold">Need help?</p>
+<p class="text-2xl sm:text-3xl font-black text-white my-1">+92 329 9267363</p>
+<p class="text-xs text-purple-200">
+              WhatsApp or call us. Email: <a class="underline hover:text-white" href="mailto:support@rooznam.pk">support@rooznam.pk</a>
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: NewsletterSection -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="bg-white text-gray-600 pt-16 pb-12 border-t border-gray-100 text-xs">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+<!-- Brand Summary Column -->
+<div class="md:col-span-2 space-y-4">
+<div class="flex items-center space-x-2">
+<!-- Brand Logo Script -->
+<span class="text-3xl brand-logo-font font-bold text-[#4a126d]">Rooznam</span>
+</div>
+<p class="font-bold text-gray-900 text-xs">Little Styles, Big Smiles.</p>
+<div class="text-xs text-gray-500 space-y-1">
+<p>WhatsApp: <span class="font-semibold text-purple-900">+92 329 9267363</span></p>
+<p>Email: <a class="text-purple-900 font-semibold hover:underline" href="mailto:support@rooznam.pk">support@rooznam.pk</a></p>
+</div>
+<!-- Social Icons -->
+<div class="flex items-center space-x-3 text-purple-900 text-lg pt-2">
+<a aria-label="Facebook" class="w-8 h-8 rounded-full bg-purple-50 flex items-center justify-center hover:bg-purple-100 transition" href="#"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+<a aria-label="Instagram" class="w-8 h-8 rounded-full bg-purple-50 flex items-center justify-center hover:bg-purple-100 transition" href="#"><i class="fa-brands fa-instagram text-sm"></i></a>
+<a aria-label="TikTok" class="w-8 h-8 rounded-full bg-purple-50 flex items-center justify-center hover:bg-purple-100 transition" href="#"><i class="fa-brands fa-tiktok text-sm"></i></a>
+<a aria-label="WhatsApp" class="w-8 h-8 rounded-full bg-purple-50 flex items-center justify-center hover:bg-purple-100 transition" href="#"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+</div>
+</div>
+<!-- Information Column -->
+<div>
+<h4 class="font-bold text-gray-900 text-xs uppercase tracking-wider mb-4">Information</h4>
+<ul class="space-y-2.5 text-gray-600">
+<li><a class="hover:text-purple-700 transition" href="#">About Us</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Contact Us</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Shipping Policy</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Exchange &amp; Return Policy</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Terms &amp; Conditions</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<!-- Account Column -->
+<div>
+<h4 class="font-bold text-gray-900 text-xs uppercase tracking-wider mb-4">Account</h4>
+<ul class="space-y-2.5 text-gray-600">
+<li><a class="hover:text-purple-700 transition" href="#">My Account</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">My Orders</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Track Your Order</a></li>
+</ul>
+<h4 class="font-bold text-gray-900 text-xs uppercase tracking-wider mt-6 mb-4">Shop</h4>
+<ul class="space-y-2.5 text-gray-600">
+<li><a class="hover:text-purple-700 transition" href="#">All Products</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">New Arrivals</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Cart</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Checkout</a></li>
+</ul>
+</div>
+<!-- Categories Column -->
+<div>
+<h4 class="font-bold text-gray-900 text-xs uppercase tracking-wider mb-4">Categories</h4>
+<ul class="space-y-2.5 text-gray-600">
+<li><a class="hover:text-purple-700 transition" href="#">Girls Eastern Wear</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Girls Western Wear</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Boys Eastern Wear</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Boys Western Wear</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Branded Ready To Wear</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Branded Ready To Stitch</a></li>
+<li><a class="hover:text-purple-700 transition" href="#">Customized</a></li>
+</ul>
+</div>
+</div>
+<!-- Copyright Subfooter -->
+<div class="border-t border-gray-100 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-400">
+<p>© 2026 Rooznam Kidswear. All rights reserved. Powered by Formonix Marketers.</p>
+<div class="flex items-center space-x-4 mt-3 sm:mt-0">
+<span>Secure Online Shopping</span>
+<i class="fa-solid fa-lock text-gray-400"></i>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- BEGIN: FloatingWhatsAppWidget -->
+<div class="fixed bottom-6 right-6 z-50 flex items-center shadow-2xl rounded-full bg-white pl-4 pr-1 py-1 border border-gray-100 transition transform hover:scale-105" data-purpose="floating-whatsapp">
+<span class="text-xs font-bold text-gray-800 mr-2 hidden sm:inline-block">Contact us</span>
+<a aria-label="Direct WhatsApp Contact" class="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center text-xl shadow-md" href="https://wa.me/923299267363" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+</div>
+<!-- END: FloatingWhatsAppWidget -->
+</body></html>
